@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'NanumGothic-Bold';
+    src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'NanumGothic-Regular';
+    margin: 0;
+    padding: 0;
+}
+#span{
+    display: inline-block;
+}
+.GoTop{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 90px;
+    text-align: center;
+    display: none;
+    transition: 0.5s;
+}
+.GoTop img{
+    width: 80px;
+    height: 80px;
+}
+html{
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #F2E3D5;
+    -ms-overflow-style:none;
+}
+body::-webkit-scrollbar { display:none; }
+a{
+    text-decoration: none;
+    color: black;
+}
+.userImage{
+    text-align: center;
+    padding: 15px;
+}
+.userImage img{
+    border-radius: 150px;
+    border: 1px solid black;
+    max-width: 300px;
+    height: 300px;
+}
+.userpanel{
+    width: 350px;
+    margin: 0 auto 15px auto;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px gray;
+    background-color: #ffffff;
+} 
+.board-panel {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr
+}
+/* .show-panel {
+    display: grid;
+    grid-template-rows:0.2fr 1fr;
+} */
+.click-show-follower-or-follow{
+    width: 350px;
+    height: 80px;
+    font-size: 25px;
+    margin: 0 auto 0 auto;
+}
+
+.userId{
+    text-align: center;
+}
+#follower-list{
+    display: none;
+}
+#follow-list-title,#follower-list-title{
+    display: inline-block;
+    width: 140px;
+    cursor: pointer;
+    margin: 0 15px 0 15px;
+    text-align: center;
+}
+.click-show-follower-or-follow input[type=radio] {
+	display: none;
+}
+.click-div{
+    margin: 0 0 15px 0;
+}
+
+
+
+#tab-1:checked ~ .click-div label:nth-child(1),
+#tab-2:checked ~ .click-div label:nth-child(2) {
+   text-decoration: underline;
+   text-underline-position: under;
+}
+/* .show-list > div {
+	display: none;
+}*/
+
+#tab-1:checked ~ .show-list div:nth-child(1),
+#tab-2:checked ~ .show-list div:nth-child(2)  {
+
+}
+
+@media  only screen and (max-width:500px){
+    .GoTop{
+        width: 60px;
+        height: 60px;
+    }
+    .GoTop img{
+        width: 60px;
+        height: 60px;
+        
+    }
+}

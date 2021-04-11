@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BearGram</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+  <div class="outerpanel">
+    <div class="empty"></div>
+    <div class="panel">
+      <div class="empty"></div>
+      <div class="login-panel">
+        <!-- <div class="index-font">BearGram</div> -->
+        <img src="/images/logo.png" alt="">
+        <form action="/login" method="POST" name="loginForm">
+          <div class="input">
+            <input type="text" name="userId" id="login-id" placeholder="아이디" autofocus>
+            <input type="password" name="userPwd" id="login-pwd" placeholder="비밀번호">
+          </div>
+          <button class="login-btn" type="submit" disabled>로그인</button>
+        </form>
+        <div class="buttons">
+          <button onclick="findId()">아이디 찾기</button>
+          <button onclick="findPwd()">비밀번호 찾기</button>
+          <button class="last-btn" onclick="sign()">회원가입</button>
+        </div>
+      </div>
+      <div class="empty"></div>
+    </div>
+    <div class="empty"></div>
+  </div>
+  <script src="/javascripts/index.js"></script>
+</body>
+
+</html>

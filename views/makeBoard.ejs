@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 작성</title>
+    <link rel='stylesheet' href='/stylesheets/makeBoardstyle.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <header id="include-header"></header>
+    </div>
+    <div class="panel">
+        <div class="empty"></div>
+        <div class="makeboard-panel">
+            <form name="makeBoard" method="POST" enctype="multipart/form-data">
+                <div class="input-div">
+                    <textarea class="textarea-Contents" name="gramContents" id="txtContent" cols="30" rows="10"></textarea>
+                    <div class="label-input">
+                        <label for="gramImageUrl" id="uploadButton"><img src="/images/photo.png" alt=""></label>
+                        <input id="gramImageUrl" type="file" name="gramImageUrl" multiple readonly>
+                    </div>
+                </div>
+                <button id="uploadBtn">업로드</button>
+            </form>
+        </div>
+        <div class="empty"></div>
+    </div>
+    <script src="/javascripts/makeBoard.js"></script>
+</body>
+
+</html>

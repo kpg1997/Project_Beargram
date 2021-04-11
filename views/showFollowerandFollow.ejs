@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=data%>의 팔로우/ 팔로워 목록</title>
+    <link rel='stylesheet' href='/stylesheets/showFollowerandFollow.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <header id="include-header"></header>
+    </div>
+        <div class="board-panel">
+            <div class="empty"></div>
+            <div class="show-panel">
+                <div class="click-show-follower-or-follow">
+                    <input type="radio" id="tab-1" name="show" checked/>
+                    <input type="radio" id="tab-2" name="show" />
+                    <div class="click-div">
+                        <label for="tab-1" id="follow-list-title">팔로우 목록</label>
+                        <label for="tab-2" id="follower-list-title">팔로워 목록</label> 
+                    </div>
+                    <div class="show-list">
+                        <div id="follow-list">
+                        <% resultMe.forEach((item,index)=>{%>
+                            <div class="userpanel">
+                                <a href="/users/findUser/<%=item.userId%>">
+                                <% if(item.userImageUrl==null){%>
+                                    <% if(item.gender==1){%>
+                                        <div class="userImage"><img src="/images/men.png" alt=""></div>
+                                    <%}else{%>
+                                        <div class="userImage"><img src="/images/girl.png" alt=""></div>
+                                    <%}%>
+                                <%}else{%>
+                                    <div class="userImage"><img src="/images/<%=item.userId%>/<%=item.userImageUrl%>" alt=""></div>
+                                <%}%>
+                                <div class="userId"><%=item.userId%></div>
+                                </a>
+                            </div>
+                        <%})%>
+                        </div>
+                        <div id="follower-list">
+                            <% resultfollow.forEach((item,index)=>{%>
+                                <div class="userpanel">
+                                    <a href="/users/findUser/<%=item.userId%>">
+                                    <% if(item.userImageUrl==null){%>
+                                        <% if(item.gender==1){%>
+                                            <div class="userImage"><img src="/images/men.png" alt=""></div>
+                                        <%}else{%>
+                                            <div class="userImage"><img src="/images/girl.png" alt=""></div>
+                                        <%}%>
+                                    <%}else{%>
+                                        <div class="userImage"><img src="/images/<%=item.userId%>/<%=item.userImageUrl%>" alt=""></div>
+                                    <%}%>
+                                    <div  class="userId"><%=item.userId%></div>
+                                    </a>
+                                </div>
+                            <%})%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="empty"></div>
+        </div>
+        <div class="GoTop">
+            <a href="#header">
+                <img src="/images/upArrow.png" alt="">
+            </a>
+        </div>
+        <script src="/javascripts/showFollowerandFollow.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'NanumGothic-Bold';
+    src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'NanumGothic-Regular';
+    margin: 0;
+    padding: 0;
+}
+.GoTop{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 90px;
+    text-align: center;
+    display: none;
+    transition: 0.5s;
+}
+.GoTop img{
+    width: 80px;
+    height: 80px;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #F2E3D5;
+}
+.board-panel {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr
+}
+.board-list{
+    text-align: center;
+}
+.board{
+    box-shadow: 0px 0px 5px gray;
+    width: 300px;
+    border: 0;
+    display: inline-block;
+    border-radius: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+}
+.import{
+    height: 250px;
+    text-align: left;
+    margin: 20px 20px 20px 20px;
+    word-break:break-all;  
+}
+.dbimg{
+    max-width: 250px;
+    max-height: 250px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    height: 300px;
+}
+.writeDay{
+    text-align: center;
+}
+
+.BoardPage {
+    border: 3px solid black;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+.BoardPage img{
+    width: 50px;
+    height: 50px;
+}
+.userImage img{
+    max-width: 300px;
+    height: 300px;
+}
+.myImg-profile{
+    padding: 10px;
+}
+.userImage,.userId,.userName,.follow-write-date {
+    display: inline-block;
+}
+.userImage,.user-Information{
+    display: inline-block;
+    vertical-align: middle;
+}
+.user-Information{
+    text-align: left;
+}
+.myProfile{
+    background-color: white;
+    width: 800px;
+    margin: 0 auto 30px auto;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px gray;
+}
+#follow-su,#follower-su{
+    display: inline-block;
+}
+
+@media  only screen and (max-width:425px){
+    .myProfile{
+        width: 400px;
+    }
+    .board{
+        margin: 0 auto 10px auto ;
+    }
+    .import{
+        margin: 20px auto 20px auto;
+        text-align: center;
+    }
+    .import .impot-contents{
+        text-align: left;
+        width: 280px;
+        margin: 0 auto 0 auto;
+    }
+}
+@media  only screen and (max-width:500px){
+    .myProfile{
+        width: 400px;
+    }
+    .board{
+        margin: 0 auto 10px auto ;
+    }
+    .import{
+        margin: 20px auto 20px auto;
+        text-align: center;
+    }
+    .import .impot-contents{
+        text-align: left;
+        width: 280px;
+        margin: 0 auto 0 auto;
+    }
+    .BoardPage img{
+        width: 25px;
+        height: 25px; 
+    }
+    .BoardPage {
+        width: 25px;
+        height: 25px; 
+    }
+    .GoTop{
+        width: 60px;
+        height: 60px;
+    }
+    .GoTop img{
+        width: 60px;
+        height: 60px;
+        
+    }
+}

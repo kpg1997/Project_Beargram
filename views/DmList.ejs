@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=user%>의 DM 목록</title>
+    <link rel='stylesheet' href='/stylesheets/DmList.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <header id="include-header"></header>
+    </div>
+    <div class="panel">
+        <div class="empty"></div>
+        <div class="DmList">
+            <div class="DmList-header">DM 목록</div>
+            <%if(list==''){%>
+                <div></div>
+            <%}else{%>
+                <div id="userlist">
+                <%list.forEach((item,index)=>{%>
+                    <%if(item.userId != user){%>
+                        <div class="dmuserId">
+                            <a href="/Dm/List/<%=item.gramDmNo%>">
+                                <%if(item.userImageUrl!=null){%>
+                                    <div class="userImage">
+                                        <img src="/images/<%=item.userId%>/<%=item.userImageUrl%>" alt="">
+                                    </div>
+                                <%}else{%>
+                                    <%if(item.gender==1){%>
+                                        <div class="userImage">
+                                            <img src="/images/men.png" alt="">
+                                        </div>
+                                    <%}else{%>
+                                        <div class="userImage">
+                                            <img src="/images/girl.png" alt="">
+                                        </div>
+                                    <%}%>
+                                <%}%>
+                                <div class="idx" style="display: none;"><%=index%></div>
+                                <div class="No" style="display: none;"><%=item.gramDmNo%></div>
+                                <div class="userId"><%=item.userId%></div>
+                                <div id="DmNoread"></div>
+                                <!-- <script>
+                                    $(document).ready(()=>{
+                                        let mother = $('#DmNoread').parents('div#userlist');
+                                        let idx= $('#DmNoread').parents('a').children('div.idx').text();
+                                        let childId = mother.children('div.userId').text();
+                                        let childNo = mother.children('div.No').text();
+                                        let dmNoread = document.getElementById('DmNoread');
+                                        console.log('ajax',idx,childId,childNo)
+                                        $.ajax({
+                                        url:'/Dm/NoReadDm',
+                                        dataType : 'json',
+                                        type:'POST',
+                                        data:{
+                                            'childId':childId,
+                                            'childNo':childNo,
+                                        },
+                                        success:(result)=>{
+                                            if(result['result']==undefined){
+                                                console.log('result ==> ',result['result'])
+                                                $('#follower-su').html(0);
+                                            }else{
+                                                $('#follower-su').html(result['result']);
+                                            }
+                                            
+                                        }
+                                        })
+                                    })
+                                </script>       -->
+                            </a>
+                            <hr>
+                        </div>
+                    <%}%>
+                <%})%>
+                </div>
+            <%}%>
+        </div>
+        <div class="empty"></div>
+    </div>
+    <div class="GoTop">
+        <a href="#header">
+            <img src="/images/upArrow.png" alt="">
+        </a>
+    </div>
+    <script src="/javascripts/Dmlist.js"></script>
+</body>
+</html>

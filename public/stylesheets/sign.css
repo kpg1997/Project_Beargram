@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumGothic-Regular';
+}
+@font-face {
+    font-family: 'NanumGothic-Bold';
+    src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+/* 
+    #3F2314
+    #643E29
+    #966846
+    #D59F6B
+    #FFE7A3
+
+*/
+.image-div{
+    text-align: center;
+}
+.panel {
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: 0.5fr 3fr 0.5fr
+}
+ul,li{
+    list-style: none;
+}
+body{
+    background-color: #F2E3D5;
+}
+.sign-panel{
+    width: 700px;
+    margin: 0 auto 20px auto;
+    padding: 50px;
+    border-radius: 70px;
+    padding-top: 25px;
+    box-shadow: 0px 0px 15px  gray;
+    background-color:#ffffff;
+}
+form{
+    margin-top: 30px;
+}
+.signTitle{
+    font-family: 'NanumGothic-Bold';
+    font-size: 50px;
+}
+.li-title,.checkBtns{
+    display: inline-block;
+}
+#userId,#inspection{
+    display: inline-block;
+}
+.gram-member-privacy{
+    margin-top: 30px;
+}
+.gram-member-privacy div input,.warning-text{
+    display: inline-block;
+}
+.gender-input,.warning-text{
+    display: inline-block;
+}
+.gram-member-privacy div input{
+    height: 30px;
+}
+input[type=radio],label{
+    vertical-align: middle;
+}
+#userId,#userPwd,#userRePwd,#userName,#userEmail,#userPhoneNumber,#userBirthday{
+    margin: 0 0 5px 0;
+    width: 200px;
+    font-size: 20px;
+}
+#userBirthday{
+    width: 202px;
+    font-size: 20px;
+}
+textarea{
+    width: 500px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+fieldset{
+    padding: 5px;
+}
+.agreement-panel{
+    margin-top: 25px;
+}
+#signupBtn{
+    width: 254px;
+    height: 50px;
+    border: 0 ;
+    background-color: #d6945b;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+    font-size: 30px;
+   
+}
+.signupBtnDiv{
+    width: 255px;
+     margin-left:auto ;
+    margin-right: auto;
+    margin-top: 10px;
+}
+#signupBtn:hover{
+    background-color: #c58145;
+}
+#inspection{
+    font-size: 25px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+#userId,#inspection{
+    vertical-align: middle;
+
+}
+.li-title,.checkBtns{
+        vertical-align: middle;
+
+    }
+/* 반응형 */
+@media  only screen and (max-width:425px){
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .signTitle{
+        font-size: 35px;
+    }
+    .image-div img{
+        width: 150px;
+        height: 100px;
+    }
+    form{
+        margin: 0;
+    }
+    .sign-panel{
+        font-size: 11px;
+        padding: 5px;
+        margin: 0 0 5px 0;
+        border-radius: 15px;
+        width: 390px;
+    }
+    .li-title{
+        font-size: 11px;
+    }
+    .li-title, .checkBtns {
+        vertical-align: middle;
+        display: inline-block;
+    }
+    fieldset{
+        width: 300px;
+        margin: auto;
+    }
+  
+    textarea{
+        width: 350px;
+        margin:10px 0 0 5px
+    }
+    #userId, #userPwd, #userRePwd, #userName, #userEmail, #userPhoneNumber, #userBirthday {
+        width: 200px;
+        font-size: 13px;
+    }
+   
+}
+@media  only screen and (max-width:500px){
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .signTitle{
+        font-size: 35px;
+    }
+    .image-div img{
+        width: 150px;
+        height: 100px;
+    }
+    form{
+        margin: 0;
+    }
+    .sign-panel{
+        font-size: 11px;
+        padding: 5px;
+        margin: 0 0 5px 0;
+        border-radius: 15px;
+        width: 390px;
+    }
+    .li-title{
+        font-size: 11px;
+    }
+    .li-title, .checkBtns {
+        vertical-align: middle;
+        display: inline-block;
+    }
+    fieldset{
+        width: 300px;
+        margin: auto;
+    }
+    /* #signupBtn{
+        margin: 0 0 5px 0;
+    } */
+    textarea{
+        width: 350px;
+        margin:10px 0 0 5px
+    }
+    #userId, #userPwd, #userRePwd, #userName, #userEmail, #userPhoneNumber, #userBirthday {
+        width: 200px;
+        font-size: 13px;
+    }
+    /* .gram-member-privacy div{
+        margin: 0 0 0 3px;
+    } */
+}
+
+@media only screen and (min-width: 800px){
+    
+}
+
+@media only screen and (max-width: 420px){
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .signTitle{
+        font-size: 35px;
+    }
+    .image-div img{
+        width: 150px;
+        height: 100px;
+    }
+    form{
+        margin: 0;
+    }
+    .sign-panel{
+        font-size: 11px;
+        padding: 5px;
+        margin: 0 0 5px 0;
+        border-radius: 15px;
+        width: 390px;
+    }
+    .li-title{
+        font-size: 11px;
+    }
+    .li-title, .checkBtns {
+        vertical-align: middle;
+        display: inline-block;
+    }
+    fieldset{
+        width: 300px;
+        margin: auto;
+    }
+    /* #signupBtn{
+        margin: 0 0 5px 0;
+    } */
+    textarea{
+        width: 350px;
+        margin:10px 0 0 5px
+    }
+    #userId, #userPwd, #userRePwd, #userName, #userEmail, #userPhoneNumber, #userBirthday {
+        width: 200px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 799px){
+    
+}

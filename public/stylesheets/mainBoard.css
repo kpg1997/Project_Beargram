@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'NanumGothic-Bold';
+    src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'NanumGothic-Regular';
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F2E3D5;
+}
+/* 
+    #3F2314
+    #643E29
+    #966846
+    #D59F6B
+    #FFE7A3
+*/
+
+.panel {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+}
+.GoTop{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 90px;
+    text-align: center;
+    display: none;
+    transition: 0.5s;
+}
+.GoTop img{
+    width: 80px;
+    height: 80px;
+    
+}
+.BoardPage {
+    border: 3px solid black;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+.follow-user-pri, .follow-write-date-panel{
+    display: inline-block;
+}
+.follow-write-date-panel{
+    float:  right;
+    margin:15px 15px 0 0;
+}
+.BoardPage img{
+    width: 50px;
+    height: 50px;
+}
+.follower-board{
+    width: 700px;
+    height: auto;
+    text-align: center;
+    margin:0 auto 10px  auto ;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.userId,.userName{
+    display: inline-block;
+}
+.userIdAnduserName,.userImage{
+    display: inline-block;
+    vertical-align: middle;
+}
+.userImage img{
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+.userImage,.userId,.userName,.follow-write-date {
+    display: inline-block;
+}
+.follow-user-pri{
+    float: left;
+    margin: 15px 0 0 15px;
+}
+.follow-write-board{
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px gray;
+}
+.follow-write-pri,.follow-write-board-panel{
+    display: block;
+}
+.follow-write-board-imageDiv{
+    height: 500px;
+}
+.follow-write-board-imageDiv a img{
+    max-width: 500px;
+    max-height: 400px;
+}
+.gramContent{
+    text-align: left;
+    width: 500px;
+    margin: auto;
+    height: 500px;
+    word-break:break-all;   
+}
+/* 반응형 */
+@media  only screen and (max-width:320px){
+    .follower-board{
+        width: 400px;
+    }
+    .follow-write-pri{
+        width: 400px;
+    }
+    .follow-write-board-imageDiv{
+        height: 410px;
+    }
+    .follow-write-board-imageDiv a img{
+        max-width: 380px;
+
+    }
+    .gramContent{
+        width: 380px;
+        height: 400px;
+        word-break:break-all;   
+    }
+}
+
+@media  only screen and (max-width:425px){
+    .follower-board{
+        width: 400px;
+    }
+    .follow-write-pri{
+        width: 400px;
+    }
+    .follow-write-board-imageDiv{
+        height: 410px;
+    }
+    .follow-write-board-imageDiv a img{
+        max-width: 380px;
+
+    }
+    .gramContent{
+        width: 380px;
+        height: 400px;
+        word-break:break-all;   
+    }
+}
+
+@media  only screen and (max-width:500px){
+    .follower-board{
+        width: 400px;
+    }
+    .follow-write-pri{
+        width: 400px;
+    }
+    .follow-write-board-imageDiv{
+        height: 410px;
+    }
+    .follow-write-board-imageDiv a img{
+        
+        max-width: 380px;
+
+    }
+    .gramContent{
+        width: 380px;
+        height: 400px;
+        word-break:break-all;   
+    }
+    .BoardPage img{
+        width: 25px;
+        height: 25px; 
+    }
+    .BoardPage {
+        width: 25px;
+        height: 25px; 
+    }
+    .GoTop{
+        width: 60px;
+        height: 60px;
+    }
+    .GoTop img{
+        width: 60px;
+        height: 60px;
+        
+    }
+}
+
+
+

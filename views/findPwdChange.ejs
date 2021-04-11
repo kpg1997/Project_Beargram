@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 변경</title>
+    <link rel='stylesheet' href='/stylesheets/find.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="findPwdChange">
+        <div class="find-pwd-change-title">비밀번호 변경</div>
+        <form method="POST" name="chForm">
+            <div class="form-div">
+                <input type="text" value="<%=data.userPwd%>" name="pwdchangePwd" style="display:none;">
+                <input type="text" value="<%=data.userId%>" name="pwdchangeuserId" style="display:none;">
+                <input type="password" name="userPwd" id="pwd" placeholder="비밀번호" required>
+                <input type="password" name="repassword" id="repwd" placeholder="비밀번호 확인" required>
+            </div>
+            <button onclick="change()"  id="pwdbtn">비밀번호 변경</button>
+        </form>
+    </div>
+    <script src="/javascripts/find.js"></script>
+</body>
+</html>

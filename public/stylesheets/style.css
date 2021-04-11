@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'NanumGothic-Bold';
+  src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumGothic-Regular';
+  src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'NanumGothic-Regular';
+  margin: 0;
+  padding: 0;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+.panel {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr */
+  margin: 150px 0 0 0;
+
+}
+/* .outerpanel{
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+} */
+@font-face {
+  font-family: 'paybooc-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #F2E3D5;
+}
+
+.login-panel {
+  margin: auto;
+  background-color: #ffffff;
+  border: 1px solid #D3D3D3;
+  height: 430px;
+  width: 500px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 70px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px gray;
+}
+.input input{
+  border: 1.5px solid black;
+  font-weight: bold;
+}
+.index-font {
+  font-size: 60px;
+  margin-bottom: 30px;
+  font-family: 'paybooc-Bold';
+}
+
+form {
+  text-align: center;
+}
+
+.input {
+  text-align: center;
+  width: 252px;
+  margin: auto;
+}
+
+.input input {
+  display: block;
+  width: 250px;
+  height: 35px;
+  margin-bottom: 3px;
+}
+
+.input,
+.login-btn {
+  display: block;
+}
+
+.login-btn {
+  width: 254px;
+  margin: auto;
+}
+
+.buttons {
+  width: 254px;
+  margin: auto;
+}
+
+button {
+  width: 254px;
+  height: 30px;
+  border: 0;
+  background-color: #d6945b;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: 0.5s;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttons button {
+  font-family: 'paybooc-Bold';
+  display: block;
+  margin-top: 3px;
+}
+
+button:hover {
+  background-color:#c58145;
+}
+@media only screen and (min-width: 800px){
+    
+}
+
+@media only screen and (max-width: 420px){
+  .login-panel {
+    width: 800px;
+    height: 900px;
+  }
+}
+
+@media only screen and (max-width: 799px){
+    
+}

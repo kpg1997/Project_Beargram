@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=data.userId%>의 게시글 수정
+    </title>
+    <link rel='stylesheet' href='/stylesheets/updateBoard.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <header id="include-header"></header>
+    </div>
+    <div class="board-panel">
+        <div class="empty"></div>
+        <div class="updateboard-panel">
+            <form action="/mainBoard/updateBoard/<%=data.gramNo%>" method="POST" enctype="multipart/form-data">
+                <div class="update-img-panel">
+                    <img src="/images/<%=data.userId%>/<%=data.gramImageUrl%>" alt=""><br>
+                    <label for="updateInput" class="updatelabel" >이미지 변경</label>
+                    <input type="file" id="updateInput" name="gramImageUrl">
+                </div>
+                <div class="gramContents">
+                    <textarea name="gramContents" id="gramContents" cols="60" rows="10"
+                        required><%=data.gramContents%></textarea>
+                </div>
+                <button id="uploadBtn">수정</button>
+            </form>
+            <!-- <div id="back" style="text-align: left;">뒤로가기</div>
+                <script>
+                    $('#back').click(()=>{
+                        history.back();
+                    })
+                </script> -->
+        </div>
+        <div class="empty"></div>
+    </div>
+    <script src="/javascripts/updateBoard.js"></script>
+</body>
+
+</html>

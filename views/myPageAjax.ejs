@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel='stylesheet' href='/stylesheets/myPageAjax.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <header id="include-header"></header>
+    </div>
+        <div class="board-panel">
+            <div class="empty"></div>
+            <div class="myPrivacy">
+                <form action="/myPage/myPageAjax" method="POST">
+                    <div class="input-password">
+                        <div><input type="password" name="userPwd" placeholder="비밀번호" required></div>
+                        <div><button>확인</button></div>
+                    </div>
+                </form>
+            </div>
+            <div class="empty"></div>
+        </div>
+        <script src="/javascripts/myPage.js"></script>
+</body>
+
+</html>

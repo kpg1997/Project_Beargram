@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 찾기</title>
+    <link rel='stylesheet' href='/stylesheets/find.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="findUserId-panel">
+        <div class="findUserId-input-panel">
+            <div class="finUserId-title">아이디 찾기</div>
+            <form method="POST" name="idForm">
+                <div class="form-div">
+                    <input type="text" placeholder="이름" required name="userName" id="userName">
+                    <input type="text" placeholder="전화번호" maxlength="11" required name="userPhoneNumber"
+                        id="userPhoneNumber">
+                    <input type="date" placeholder="이메일" required required name="userBirthday" id="userBirthday">
+                </div>
+                <button onclick="find(1)">아이디 찾기</button>
+            </form>
+        </div>
+        <%if(data!=""){%>
+            <div class="findresult">
+                <%=data%> 입니다.
+            </div>
+        <%}%>
+        
+    </div>
+    <script src="/javascripts/find.js"></script>
+</body>
+
+</html>

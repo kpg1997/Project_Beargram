@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'NanumGothic-Bold';
+    src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.GoTop{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 90px;
+    text-align: center;
+    display: none;
+    transition: 0.5s;
+}
+.GoTop img{
+    width: 80px;
+    height: 80px;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+*{
+    font-family: 'NanumGothic-Regular';
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #F2E3D5;
+}
+.panel {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+}
+.board-pan{
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+}
+.board-header-user{
+    text-align: left;
+    margin: 15px 0 0 15px;
+}
+.userId,.userName{
+    display: inline-block;
+}
+.detail-board-date{
+    text-align: right;
+    margin: 30px 15px 0 0;
+}
+.board-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.detail-board-summary{
+   margin: 30px 0 30px 0;
+}
+.detail-board-panel{
+    width: 700px;
+    text-align: center;
+    margin:0 auto 0 auto ;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px gray;
+    padding: 15px;
+}
+.detail-board-img img{
+    width: 600px;
+    max-width: 600px;
+    max-height: 600px;
+}
+.userImage img{
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+.userIdAnduserName,.userImage{
+    display: inline-block;
+    vertical-align: middle;
+}
+.loginUserinput{
+    text-align: right;
+    margin-right: 0;
+    float: right;
+    margin-top: 10px;
+}
+#back, #deleteBoard, #updateBoard{
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.reply-list div{
+    display: inline-block;
+}
+.reply-list{
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.reply-reply{
+    text-align: left;
+    width: 400px;
+    word-break:break-all;
+}
+.reply-write{
+    margin: 5px 0 0 0 ;
+}
+.reply-write form #reply{
+    float: left;
+    margin: 0 0 0 10px;
+    height: 30px;
+    width: 630px;
+    font-size: 20px;
+}
+#replybtn{
+    font-size: 20px;
+    padding: 5px;
+    background-color: #d6945b;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    float: left;
+    height: 34px;
+    transition: 0.5s;
+}
+#replybtn:hover{
+    background-color: #c58145;
+}
+.detail-board-contents{
+    text-align: left;
+    width: 500px;
+    margin: auto;
+    height: auto;
+    word-break:break-all; 
+}
+.btn{
+    font-size: 25px;
+    padding: 5px;
+    background-color: #d6945b;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: #c58145;
+}
+    
+.btn a{
+    color: white;
+}
+
+#like-board-btn,.btn{
+    display: inline-block;
+} 
+#Dm-start img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.loginUserinput #Dm-start{
+    display: inline-block;
+}
+.loginUserinput #back,.loginUserinput #Dm-start{
+    vertical-align: middle;
+}
+.loginUserinput button{ vertical-align: middle;}
+.reply-user,.reply-reply{
+    vertical-align: middle;
+}
+.reply-user{
+    width: 160px;
+}
+#after{
+    display: none;
+}
+.like-board-btn img{
+    width: 50px;
+    height: 50px;
+}
+.like-board-btn{
+    width: auto;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.like-board-btn div{
+    display: inline-block;
+}
+.like-board-btn div,.like-board-btn img{
+   vertical-align: middle;
+}
+#before:disabled{   
+    transition: 0.5s;
+}
+#before:enabled{   
+    transition: 0.5s;
+}
+#before{
+    transition: 0.5s;
+}
+/* 반응형 */
+@media  only screen and (max-width:425px){
+    .detail-board-panel{
+        width: 400px;
+        padding: 5px;
+    }
+    .board-header{
+        width: 400px;
+    }
+    .detail-board-img{
+        width: 400px;
+    }
+    .detail-board-img img{
+        width: 400px;
+    }
+    .loginUserinput{
+        width: 400px;
+        margin: 0 0 5px 0;
+    }
+    .reply-write form #reply {
+        width: 329px;
+    }
+    #replybtn{
+        width: 50px;
+        font-size: 15px;
+    }
+    .detail-board-contents {
+        word-break:break-all; 
+        width: 380px;
+    }
+    .reply-user{
+        width: 100px;
+    }
+    .userImage img{
+        width: 30px;
+        height: 30px;
+    }
+    .reply-list{
+        width: 386px;
+    }
+    .reply-reply{
+        width: 200px;
+    }
+    .reply-date{
+        width: 70px;
+    }
+}
+@media  only screen and (max-width:500px){
+    .detail-board-panel{
+        width: 400px;
+        padding: 5px;
+    }
+    .board-header{
+        width: 400px;
+    }
+    .detail-board-img{
+        width: 400px;
+    }
+    .detail-board-img img{
+        width: 400px;
+    }
+    .loginUserinput{
+        width: 400px;
+        margin: 0 0 5px 0;
+    }
+    .reply-write form #reply {
+        width: 329px;
+    }
+    #replybtn{
+        width: 50px;
+        font-size: 15px;
+    }
+    .detail-board-contents {
+        word-break:break-all; 
+        width: 380px;
+    }
+    .reply-user{
+        width: 100px;
+    }
+    .userImage img{
+        width: 30px;
+        height: 30px;
+    }
+    .reply-list{
+        width: 386px;
+    }
+    .reply-reply{
+        width: 200px;
+    }
+    .reply-date{
+        width: 70px;
+    }
+    #back, #deleteBoard, #updateBoard {
+        margin: 0 5px 0 0;
+    }
+}

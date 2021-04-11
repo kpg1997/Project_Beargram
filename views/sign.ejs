@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel='stylesheet' href='/stylesheets/sign.css' />
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+  <div class="image-div">
+    <a href="/"><img src="/images/logo.png" alt=""></a>
+  </div>
+  <div class="panel">
+    <div class="empty"></div>
+    <div class="sign-panel">
+      <div class="signTitle">회원가입</div>
+      <form action="/sign" method="POST" name="signForm">
+        <div class="agreement-panel">
+          <fieldset>
+            <ul class="agreement-box">
+              <li class="checkbox box1">
+                <ul class="checkboxtext">
+                  <label>
+                    <li class="li-title">• 이용약관, 개인정보 수집 및 이용, 메일수신(선택)에 모두 동의합니다.</li>
+                    <li id="checkAll" class="checkBtns">
+                      <input type="checkBox" name="checkAll" id="chk" class="checkBoxs">
+                    </li>
+                  </label>
+                </ul>
+              </li>
+              <li class="checkbox box2">
+                <ul class="checkboxtext">
+                  <label>
+                    <li class="li-title">• 이용약관 동의(필수)</li>
+                    <li class="checkBtns">
+                      <input type="checkBox" name="checkBtn" class="checkBoxs" id="box2" value="1">
+                    </li>
+                  </label>
+                </ul>
+                <textarea> 여러분을 환영합니다.
+BearGram 서비스 및 제품(이하 '서비스')을 이용해 주셔서 감사합니다.본 약관은 다양한 BearGram 서비스의 이용과 관련하여 BearGram 서비스를 제공하는 BearGram 주식회사와 이를 이용하는 BearGram 서비스 회원 또는 비회원과의 관계를 설명하며, 아울러 여러분의 BearGram 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다. 
+                </textarea>
+              </li>
+              <li class="checkbox box3">
+                <ul class="checkboxtext">
+                  <label>
+                    <li class="li-title">• 개인정보 수집 및 이용에 대한 안내(필수)</li>
+                    <li class="checkBtns">
+                      <input type="checkBox" name="checkBtn" class="checkBoxs" id="box3" value="1">
+                    </li>
+                  </label>
+                </ul>
+                <textarea> 1. 개인정보 수집 및 이용 목적
+회사는 수집한 개인정보를 다음과 같은 목적으로 이용합니다.
+                  
+• 이용자가 본 서비스를 원활하게 이용할 수 있도록 하기 위해
+• 본인확인과 부정 이용 방지를 위해
+• 본 서비스 이용에 관한 통계 데이터를 작성하기 위해
+• 본 서비스의 개선 및 신규 서비스 제공에 필요한 설문 조사 및 분석을 위해
+• 이용자로부터 문의 인입시 응대를 위해
+• 본 서비스 및 LINE 이외의 사업자가 주체가 되는 홍보성 정보(광고 포함)의 전송을 위하여
+• 새로운 서비스 개발 및 제공을 위하여
+• 캠페인 및 이벤트 등의 추첨 및 경품 배송을 위해
+• 이용자로부터 문의 인입시 등 본인 확인을 위하여
+• 중요한 공지사항 등을 필요에 따라 공지하기 위해
+                  
+1. 회원 등록 정보
+                  
+본 서비스의 원활한 이용과 회사와 이용자 간의 원활한 커뮤니케이션을목적으로 프로필 정보, 캐릭터 이름 등을 이용자가 직접 등록 하실 수 있습니다. 또한 본 서비스에서 표시하기 위한 프로필 정보 등 및 다른 이용자에게 공개하기 위해 이용자가 직접 등록/포스팅한 정보(텍스트, 이미지, 동영상 등)는 다른 이용자도 볼 수 있습니다.
+                  
+2. 서비스 이용 정보
+                  
+• 쿠키(Cookie)
+                  
+이용자의 설정 내용 저장 등 이용자의 편리성 향상과 세션 유지 및 보호 등 보안성 향상을 위하여 쿠키를 사용합니다. 그리고 본 서비스에 대한 이용 횟수 및 형태•이용자 규모 등을 파악하여 더 나은 서비스를 제공하기 위해 쿠키를 사용합니다.이용자는 쿠키 사용 여부를 선택할 수 있습니다. 쿠키의 저장을 거부할 경우에는 로그인이 필요한 일부 서비스는 이용에 어려움이 있을 수 있습니다.
+개인정보의 제공회사는 이용자의 사전 동의 없이 개인정보를 외부에 공개하거나 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.
+                  
+• 이용자가 사전에 동의한 경우
+• 법령에 의한 경우
+• 이용자가 본 서비스 이용 규약을 위반하여 회사의 권리, 서비스등을 보호하기 위해서 개인 정보를 공개할 수 밖에 없다고 판단할만한 충분한근거가 있는 경우
+• 사람의 생명, 신체 또는 재산의 보호를 위해서 필요가 있는 경우로서,본인의 동의를 얻기 어려운 경우
+• 공중 위생의 향상 또는 아동의 보호를 위해 특별히 필요가 있는 경우로서, 본인의 동의를 얻기 어려운 경우
+• 국가 기관 혹은 지방 공공 단체 또는 그 위탁을 받은 자가 법령이 정한 사무를 수행하는 것에 대해서 협력할 필요가 있고, 본인의 동의를 얻음으로써 해당 업무 수행에 지장을 미칠 우려가 있는 경우
+• 합병, 기업분할, 영업 양도 등의 사유로 개인정보의 제공을 포함한 회사의 사업 승계가 이루어지는 경우
+                </textarea>
+              </li>
+              <li class="checkbox box4">
+                <ul class="checkboxtext">
+                  <label>
+                    <li class="li-title">• 메일수신 동의(선택)</li>
+                    <li class="checkBtns">
+                      <input type="checkBox" name="checkBtnselect" class="checkBoxs">
+                    </li>
+                  </label>
+                </ul>
+                <textarea> 정보통신망 이용촉진 및 정보보호 등에 관한 법률
+                  
+제50조(영리목적의 광고성 정보 전송 제한)
+⑧ 제1항 또는 제3항에 따라 수신동의를 받은 자는 대통령령으로 정하는 바에 따라 정기적으로 광고성 정보 수신자의 수신동의 여부를 확인하여야 한다.
+                  
+정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령
+            
+제62조의3 (수신동의 여부의 확인)
+                  
+① 법 제50조제1항 또는 제3항에 따라 수신자의 사전 동의를 받은 자는 같은 조 제8항에 따라 그 수신동의를 받은 날부터 2년마다(매 2년이 되는 해의 수신동의를 받은 날과 같은 날 전까지를 말한다) 해당 수신자의 수신동의 여부를 확인하여야 한다.
+② 제1항에 따라 수신 동의 여부를 확인하려는 자는 수신자에게 다음 각 호의 사항을 밝혀야 한다.
+1. 전송자의 명칭
+2. 수신자의 수신동의 사실과 수신에 동의한 날짜
+3. 수신 동의에 대한 유지 또는 철회의 의사를 표시하는 방법
+                </textarea>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="gram-member-privacy">
+          <div><input id="userId" type="text" name="userId" placeholder="아이디" maxlength="20">
+            <div class="warning-text" id="w-id"></div>
+          </div>
+          <div><input type="password" name="userPwd" id="userPwd" placeholder="비밀번호" maxlength="20">
+            <div class="warning-text" id="w-pwd"></div>
+          </div>
+          <div><input type="password" id="userRePwd" placeholder="비밀번호 재확인" maxlength="20">
+            <div class="warning-text" id="w-repwd"></div>
+          </div>
+          <div><input type="text" name="userName" id="userName" placeholder="이름" maxlength="20">
+            <div class="warning-text" id="w-name"></div>
+            <div class="divs">
+              <div class="gender-input">
+                <input type="radio" class="gender" name="gender" value="1" id="men"><label for="men">남</label>
+                <input class="gender" type="radio" name="gender" value="0" id="girl"><label for="girl">여</label>
+              </div>
+              <div class="warning-text" id="w-gender"></div>
+            </div>
+            <div><input type="email" name="userEmail" id="userEmail" placeholder="이메일">
+              <div class="warning-text" id="w-email"></div>
+            </div>
+            <div><input type="text" name="userPhoneNumber" id="userPhoneNumber" placeholder="전화번호" maxlength="11">
+              <div class="warning-text" id="w-phone"></div>
+            </div>
+            <div><input type="date" name="userBirthday" id="userBirthday" placeholder="생일">
+              <div class="warning-text" id="w-birthday"></div>
+            </div>
+          </div>
+        </div>
+        <div class="signupBtnDiv"><button id="signupBtn" onclick="submitSignUP()" disabled>회원가입</button></div>
+      </form>
+      
+    </div>
+    <div class="empty"></div>
+  </div>
+  
+  <script src="/javascripts/sign.js"></script>
+</body>
+
+</html>

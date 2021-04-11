@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'NanumGothic-Bold';
+    src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'NanumGothic-Regular';
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F2E3D5;
+    padding: 15px;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+/* 아이디 찾기 css */
+.findUserId-panel{
+    margin: auto;
+    width: 350px;
+    height: 160px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px gray;
+}
+.finUserId-title{
+    font-family: 'NanumGothic-Bold';
+    font-size: 25px;
+    margin: 0 0 15px 0;
+}
+
+.findUserId-panel form{
+    margin-bottom: 15px;
+}
+
+.form-div input{
+    display: block;
+    width: 150px;
+}
+.form-div, form button{
+    display: inline-block;
+    vertical-align: middle;
+}
+/* 
+    #3F2314
+    #643E29
+    #966846
+    #D59F6B
+    #FFE7A3
+
+*/
+/* 아이디 찾기 버튼 */
+form button{
+    font-family: 'NanumGothic-Bold';
+    border: 0;
+    width: 150px;
+    height: 62px;
+    font-size: 20px;
+    background-color: #d6945b;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+}
+form button:hover{
+    background-color: #c58145;
+}
+/* 비밀번호 찾기 css */
+.findPwd-panel{
+    margin: auto;
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px gray;
+}
+.find-pwd-title{
+    font-family: 'NanumGothic-Bold';
+    font-size: 25px;
+    margin: 0 0 15px 0;
+}
+.form-div input{
+    display: block;
+    width: 150px;
+}
+.findPwdBtn{
+    width: 150px;
+    height: 81px;
+    border: 0;
+    font-size: 20px;
+    background-color: #d6945b;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+}
+.findPwdBtn:hover{
+    background-color: #c58145;
+}
+/* 비밀번호 변경 페이지 */
+.findPwdChange{
+    margin: auto;
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px gray;
+}
+#pwd,#repwd{
+    display: block;
+}
+.find-pwd-change-title{
+    font-family: 'NanumGothic-Bold';
+    font-size: 25px;
+    margin: 0 0 15px 0;
+}
+#pwdbtn{
+    width: 150px;
+    height: 38px;
+    border: 0;
+    background-color: #d6945b;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+}
+#pwdbtn:hover{
+    background-color: #c58145;
+}

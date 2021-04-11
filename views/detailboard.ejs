@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=data[0].userId%>의 게시글
+    </title>
+    <link rel='stylesheet' href='/stylesheets/detailboard.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <header id="include-header"></header>
+    </div>
+    <div class="panel">
+        <div class="empty"></div>
+        <div class="detail-board-panel">
+            <div class="board-pan">
+                <div class="board-header">
+                    <div class="board-header-user">
+                        <a href="/users/findUser/<%=data[0].userId%>">
+                            <%if(data[0].userImageUrl!=null){%>
+                                <div class="userImage">
+                                    <img src="/images/<%=data[0].userId%>/<%=data[0].userImageUrl%>" alt="">
+                                </div>
+                            <%}else{%>
+                                <%if(data[0].gender==1){%>
+                                    <div class="userImage">
+                                        <img src="/images/men.png" alt="">
+                                    </div>
+                                <%}else{%>
+                                    <div class="userImage">
+                                        <img src="/images/girl.png" alt="">
+                                    </div>
+                                <%}%>
+                            <%}%>
+                        <div class="userIdAnduserName">
+                            <div class="userId" id="userId"><%=data[0].userId%></div>
+                            <div class="userName">(<%=data[0].userName%>)</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="detail-board-date">
+                       <%=date%>
+                    </div>
+                </div>
+                <div class="detail-board-summary">
+                    <%if(data[0].gramImageUrl!=''){%>
+                        <div class="detail-board-img">
+                            <img src="/images/<%=data[0].userId%>/<%=data[0].gramImageUrl%>" alt="">
+                        </div>
+                    <%}%>
+                    <%if(data[0].gramContents!=''){%>
+                        <div class="detail-board-contents">
+                            <%=data[0].gramContents%>
+                        </div>
+                    <%}%>
+                </div>
+                <div class="loginUserinput">
+                        <input type="hidden" value="<%=data[0].gramNo%>" id="gNo">
+                        
+                        <%if(data[0].userId!=session){%>
+                            <div id="Dm-start"><img src="/images/DM.png" alt=""></div>
+                        <%}%>
+                        <button id="back" class="btn" >뒤로가기</button>
+                        
+                        <%if(data[0].userId==session){%>
+                        <button class="btn" id="deleteBoard">삭제</button>
+                        <button class="btn" id="updateBoard"><a href="/mainBoard/updateBoard/<%=data[0].gramNo%>">수정</a></button>
+                        <%}%>
+                        <div class="like-board-btn">
+                            <img src="/images/Like-before.png" alt="" id="before">
+                            <img src="/images/Like-after.png" alt="" id="after">
+                            <div id="getGramNoSu"></div>
+                        </div>
+                        
+                </div>
+            </div>
+            <hr>
+                <div class="this-board-reply">
+                    <div class="show-reply-list">
+                        <%if(reply==undefined){%>
+                            <div></div>
+                        <%}else{%>
+                            <%reply.forEach((item,index)=>{%>
+                                <div class="reply-list">
+                                    <div class="reply-user">
+                                        <a href="/users/findUser/<%=item.userId%>">
+                                            <%if(item.userImageUrl!=null){%>
+                                                <div class="userImage">
+                                                    <img src="/images/<%=item.userId%>/<%=item.userImageUrl%>" alt="">
+                                                </div>
+                                            <%}else{%>
+                                                <%if(item.gender==1){%>
+                                                    <div class="userImage">
+                                                        <img src="/images/men.png" alt="">
+                                                    </div>
+                                                <%}else{%>
+                                                    <div class="userImage">
+                                                        <img src="/images/girl.png" alt="">
+                                                    </div>
+                                                <%}%>
+                                            <%}%>
+                                        <div class="userIdAnduserName">
+                                            <div class="userName"><%=item.userName%></div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="reply-reply">
+                                        <p><%=item.reply%></p>
+                                    </div>
+                                    <% 
+                                        var date=new Date(item.replyDate);
+                                        var fdate=date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate() ;
+                                    %>
+                                    <div class="reply-date"><%=fdate%></div>
+                                </div>
+                               
+                                <hr>
+                            <%})%>
+                        <%}%>
+                    </div>
+                    <div class="reply-write">
+                        <form method="POST" name="replyForm">
+                            <input name="reply" id="reply" maxlength="200"></input>
+                            <button id="replybtn">게시</button>
+                        </form>
+                    </div>
+                </div>
+
+        </div>
+        <div class="empty"></div>
+    </div>
+    <div class="GoTop">
+        <a href="#header">
+            <img src="/images/upArrow.png" alt="">
+        </a>
+    </div>
+    <script>
+        $('#back').click(() => {
+            history.back();
+        })
+    </script>
+    <script src="/javascripts/detailboard.js"></script>
+</body>
+
+</html>

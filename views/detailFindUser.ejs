@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=user[0].userId%>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/detailfinduser.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <header id="include-header"></header>
+    </div>
+    <div class="panel">
+        <div class="empty"></div>
+        <div class="findUser-panel">
+            <div class="findUser-pri">
+                <%if(user[0].userImageUrl==null){%>
+                    <%if(user[0].gender==1){%>
+                        <div class="userImage-pan">
+                            <img src="/images/men.png" alt="">
+                        </div>
+                        <%}else{%>
+                        <div class="userImage-pan">
+                            <img src="/images/girl.png" alt="">
+                        </div>
+                        <%}%>
+                    <%}else{%>
+                        <div class="userImage-pan">
+                            <img src="/images/<%=user[0].userId%>/<%=user[0].userImageUrl%>" alt="">
+                        </div>
+                    <%}%>
+                    <div class="user-Information">
+                        <div>
+                            <%=user[0].userName%>(<div id="userId" style="color: gray;"><%=user[0].userId%></div>)
+                        </div>
+                        <div>
+                            Birthday : <%=birth%>
+                        </div>
+                        
+                        <div class="follower-text">팔로워 : <div id="follower-su"></div></div>
+                        <div class="follow-text">팔로우 : <div id="follow-su"></div></div><br>
+                        <!-- 팔로우 기능 생각..... -->
+                        <div class="div-follow-btn">
+                            <%if(session != user[0].userId){%>
+                                <div id="Dm-start"><img src="/images/DM.png" alt=""></div>
+                                <button class="followBtn" id="insert-follow">팔로우</button>
+                                <button class="followBtn" id="delete-follow">팔로우 취소</button>
+                            <%}%>
+                        </div>
+                   </div>
+            </div>
+            
+        </div>
+        <div class="empty"></div>
+    </div>
+    <div class="findUser-board">
+        <%board.forEach((item,index)=>{%>
+            <%
+                var date=new Date(item.gramDate);item.gramDate;
+                var fdate=date.getFullYear() + '년' + (date.getMonth() + 1) + '월' + date.getDate() + '일';
+            %>
+                <div class="findUser-board-list">
+                    <a href="/mainBoard/detailBoard/<%=item.gramNo%>">
+                            
+                        <div class="findUser-date"><%=fdate%></div>
+                        <div class="findUser-board-img">
+                            <%if(item.gramImageUrl==null){%>
+                                <div class="no-img-contents"><%=item.gramContents%></div>
+                            <%}else{%>
+                                <img src="/images/<%=item.userId%>/<%=item.gramImageUrl%>" alt="">
+                            <%}%>
+                                    
+                        </div>
+                    </a>
+                </div>
+        <%})%>
+    </div>
+    <div class="GoTop">
+        <a href="#header">
+            <img src="/images/upArrow.png" alt="">
+        </a>
+    </div>
+    <script src="/javascripts/detailfinduser.js"></script>
+</body>
+
+</html>

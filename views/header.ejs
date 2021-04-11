@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <% if(loginUserId==undefined){%>
+        <script>alert('로그아웃 됩니다.'); location.href = "/";
+        </script>
+        <%}else{%>
+            <div class="header">
+                <div class="main-logo"><a href="/mainBoard"><img src="/images/logo.png" alt=""></a></div>
+                <div class="header-search">
+                    <div class="header-ul">
+                        <ul>
+                            <li><a href="/mainBoard"><img src="/images/home.png" alt=""></a></li>
+                            <li id="header-profile-img-li">
+                                <a href="/mainBoard/<%=loginUserId%>">
+                                    <%if(img!=null){%>
+                                            <img src="/images/<%=loginUserId%>/<%=img%>" alt="">
+                                    <%}else{%>
+                                        <%if(gender==1){%>
+                                            <img src="/images/men.png" alt="">
+                                        <%}else{%>
+                                            <img src="/images/girl.png" alt="">
+                                        <%}%>
+                                    <%}%>
+                                </a>
+                            </li>
+                            <li><a href="/myPage/showFollowerandFollow"><img src="/images/follow.png" alt="" srcset=""></a></li>
+                            <li><div id="ajaxMypage"><img src="/images/my.png" alt=""></div></li>
+                            <!-- <li><a href="/mainBoard/pushed-like"><img src="/images/Like-after.png" alt=""></a></li> -->
+                            <li><div id="DmList"><img src="/images/DM.png" alt=""></div></li>
+                            <li class="last-li"><a href="/login/logout"><img src="/images/logout.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="cover-form">
+                        <form method="POST" name="searchForm">
+                            <div class="form-div">
+                                <select name="select-option" id="select-option">
+                                    <option value="userId">사용자 아이디</option>
+                                    <option value="userName">사용자 이름</option>
+                                    <option value="gramContents">게시글 내용</option>
+                                </select>
+                            </div>
+                            <div class="form-div">
+                                    <input type="text" name="search-text" id="search-text" required>
+                                <input type="submit" id="search-input" onclick="searchAll()">
+                                <label for="search-input">
+                                    <img src="/images/Magnifying-Glass.png" alt="" id="search-img">
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <%}%>
+                <script src="/javascripts/header.js"></script>
+</body>
+
+</html>

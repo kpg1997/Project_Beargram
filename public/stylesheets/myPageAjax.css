@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'NanumGothic-Bold';
+    src: url('/font/Nanum_Gothic/NanumGothic-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('/font/Nanum_Gothic/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'NanumGothic-Regular';
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F2E3D5;
+}
+.board-panel {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr
+}
+.myPrivacy{
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 300px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px gray;
+}
+.input-password{
+    margin: 25% 0 0 0 ;
+}
+.input-password div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.input-password div input{
+    width: 150px;
+    height: 40px;
+}
+.input-password div button{
+    font-size: 25px;
+    padding: 5px;
+    background-color: #d6945b;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+}
+.input-password div button:hover{
+    background-color: #c58145;
+}
+@media  only screen and (max-width:425px){
+    .myPrivacy{
+        width: 400px;
+    }
+}
+@media  only screen and (max-width:500px){
+    .myPrivacy{
+        width: 400px;
+    }
+}

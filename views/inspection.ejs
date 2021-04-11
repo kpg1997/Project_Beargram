@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중복검사</title>
+    <link rel='stylesheet' href='/stylesheets/inspection.css' />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="inspection-form-panel">
+        <form action="/sign/inspection/" method="POST" name="inspectionFORM">
+            <input type="text" name="userid" id="insId" placeholder="아이디">
+            <button class="inspection-btn" onclick="idOk()">중복검사</button>
+        </form>
+        <div class="result-panel">
+        <%if(result=='yes'){%>
+            <div><input id="userId" type="text" readonly value="<%=data%>"> 사용가능한 아이디 </div>
+            <div class="inspection-btn-div"><button class="inspection-btn" onclick="useid()" id="use">사용하기</button></div>
+        <%}else if(result=='no'){%>
+            <div><input type="text" readonly value="<%=data%>"> 사용불가능한 아이디 </div>
+        <%}%>
+        </div>
+    </div>
+    <script src="/javascripts/sign.js"></script>
+</body>
+</html>
